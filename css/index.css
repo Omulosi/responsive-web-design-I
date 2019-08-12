@@ -113,7 +113,6 @@ nav a:hover {
   align-items: center;
   justify-content: space-around;
   margin-top: 4em;
-  border-bottom: 1px solid black;
   padding-bottom: 5em;
 }
 
@@ -170,7 +169,6 @@ nav a:hover {
 .info {
   margin-top: 2.3em;
   padding-bottom: 4.7em;
-  border-bottom: 1px solid black;
   display: flex;
 }
 
@@ -272,11 +270,25 @@ footer > p {
   margin-top: 1em;
 }
 
+.bottom-border {
+	border-bottom: 1px solid black;
+}
+
 
 /* Adaptive Designs */
 
 
 @media (max-width: 800px) {
+
+	.content {
+		max-width: 100%;
+		padding: 1.5em 1.8em;
+	}
+
+	.bottom-border {
+		border-bottom: 2px solid black;
+	}
+
 	header {
 		flex-direction: column-reverse;
 	}
@@ -299,9 +311,52 @@ footer > p {
 		width: 100%;
 	}
 
+	.intro div+div {
+		padding-left: 1.5em;
+	}
+
+	.info div+div {
+		padding-left: 1.5em;
+	}
+
 	
 }
 
 @media  (max-width: 500px) {
+
+	.content {
+		max-width: 100%;
+		padding: 1.5em 1.8em;
+	}
 	
+
+	.intro {
+		flex-direction: column;
+	}
+
+	.intro div+div {
+		padding-top: 2.5em;
+	}
+
+	.info {
+		flex-direction: column;
+	}
+
+	.info h2 {
+		padding-top: 1em;
+	}
+
+	.info div+div {
+		padding-top: 2em;
+		padding-left: 0;
+	}
+
+	.intro div+div {
+		padding-left: 0;
+	}
+
+	.bottom-border {
+		border-bottom: 2px solid black;
+	}
+
 }
