@@ -75,22 +75,24 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Header */
-header {
+.header {
   display: flex;
   align-items: center;
-  font-size: 0.9em;
+  justify-content: center;
+
 }
 
 nav {
-  flex: 1 1 0;
-  display: flex;
-  padding-right: 2.1em;
+	flex-grow: 6;
+	display: flex;
 }
 
 nav > a {
   text-decoration: none;
   color: rgba(100,100,100, 0.6);
+  display: inline-block;
   flex: 1 1 0;
+  justify-content: flex-end;
 }
 
 nav a:hover {
@@ -98,7 +100,7 @@ nav a:hover {
 }
 
 .logo {
-  flex-shrink: 1;
+	flex-grow: 1;
 }
 
 .logo img {
@@ -162,6 +164,7 @@ nav a:hover {
   padding-bottom: 2.8em;
   display: flex;
 }
+
 
 /* Informational */
 .info {
@@ -269,3 +272,36 @@ footer > p {
   margin-top: 1em;
 }
 
+
+/* Adaptive Designs */
+
+
+@media (max-width: 800px) {
+	header {
+		flex-direction: column-reverse;
+	}
+
+	nav {
+		width: 100%;
+		padding-top: 2em;
+	}
+
+	.hero-image {
+		display: none;
+	}
+
+	.main-img {
+		display: flex;
+
+	}
+
+	.main-img > img {
+		width: 100%;
+	}
+
+	
+}
+
+@media  (max-width: 500px) {
+	
+}
